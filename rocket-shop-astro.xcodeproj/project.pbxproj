@@ -14,6 +14,19 @@
 		B5EFC5E62B470E1900C3E53A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EFC5E42B470E1900C3E53A /* Main.storyboard */; };
 		B5EFC5E82B470E1A00C3E53A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5EFC5E72B470E1A00C3E53A /* Assets.xcassets */; };
 		B5EFC5EB2B470E1A00C3E53A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5EFC5E92B470E1A00C3E53A /* LaunchScreen.storyboard */; };
+		B5EFC5FA2B47153300C3E53A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5F52B47153200C3E53A /* HomePresenter.swift */; };
+		B5EFC5FB2B47153300C3E53A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5F62B47153200C3E53A /* HomeInteractor.swift */; };
+		B5EFC5FC2B47153300C3E53A /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5F72B47153200C3E53A /* HomeRouter.swift */; };
+		B5EFC5FD2B47153300C3E53A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5F82B47153300C3E53A /* HomeViewController.swift */; };
+		B5EFC5FE2B47153300C3E53A /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5F92B47153300C3E53A /* HomeModule.swift */; };
+		B5EFC6022B47155C00C3E53A /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC6012B47155C00C3E53A /* HomeCollectionViewCell.swift */; };
+		B5EFC6062B47161100C3E53A /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC6052B47161100C3E53A /* ProductModel.swift */; };
+		B5EFC60C2B4716A100C3E53A /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC6092B4716A100C3E53A /* Extension+String.swift */; };
+		B5EFC60D2B4716A100C3E53A /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC60A2B4716A100C3E53A /* Extension+UIColor.swift */; };
+		B5EFC60E2B4716A100C3E53A /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC60B2B4716A100C3E53A /* Extension+UIView.swift */; };
+		B5EFC6102B4716B700C3E53A /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC60F2B4716B700C3E53A /* AppHelper.swift */; };
+		B5EFC6122B4716BB00C3E53A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC6112B4716BB00C3E53A /* Constants.swift */; };
+		B5EFC6152B4716D600C3E53A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC6142B4716D600C3E53A /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +40,19 @@
 		B5EFC5E72B470E1A00C3E53A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5EFC5EA2B470E1A00C3E53A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5EFC5EC2B470E1A00C3E53A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5EFC5F52B47153200C3E53A /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B5EFC5F62B47153200C3E53A /* HomeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		B5EFC5F72B47153200C3E53A /* HomeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		B5EFC5F82B47153300C3E53A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B5EFC5F92B47153300C3E53A /* HomeModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		B5EFC6012B47155C00C3E53A /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		B5EFC6052B47161100C3E53A /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B5EFC6092B4716A100C3E53A /* Extension+String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		B5EFC60A2B4716A100C3E53A /* Extension+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		B5EFC60B2B4716A100C3E53A /* Extension+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		B5EFC60F2B4716B700C3E53A /* AppHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
+		B5EFC6112B4716BB00C3E53A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5EFC6142B4716D600C3E53A /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		F9F991692B066725A0EC2829 /* Pods_rocket_shop_astro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rocket_shop_astro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -56,7 +82,6 @@
 				953CD5AEFD770C13E8B9083B /* Pods-rocket-shop-astro.debug.xcconfig */,
 				A89BFEDB28D511B5F111CA1E /* Pods-rocket-shop-astro.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +106,10 @@
 		B5EFC5DD2B470E1900C3E53A /* rocket-shop-astro */ = {
 			isa = PBXGroup;
 			children = (
+				B5EFC6132B4716CD00C3E53A /* Network */,
+				B5EFC6032B47159C00C3E53A /* Model */,
+				B5EFC6072B47168F00C3E53A /* Common */,
+				B5EFC6042B4715AB00C3E53A /* Presentation */,
 				B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */,
 				B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */,
 				B5EFC5E22B470E1900C3E53A /* ViewController.swift */,
@@ -90,6 +119,71 @@
 				B5EFC5EC2B470E1A00C3E53A /* Info.plist */,
 			);
 			path = "rocket-shop-astro";
+			sourceTree = "<group>";
+		};
+		B5EFC5F42B47151F00C3E53A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC6012B47155C00C3E53A /* HomeCollectionViewCell.swift */,
+				B5EFC5F62B47153200C3E53A /* HomeInteractor.swift */,
+				B5EFC5F92B47153300C3E53A /* HomeModule.swift */,
+				B5EFC5F52B47153200C3E53A /* HomePresenter.swift */,
+				B5EFC5F72B47153200C3E53A /* HomeRouter.swift */,
+				B5EFC5F82B47153300C3E53A /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B5EFC6032B47159C00C3E53A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC6052B47161100C3E53A /* ProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5EFC6042B4715AB00C3E53A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC5F42B47151F00C3E53A /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B5EFC6072B47168F00C3E53A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC6082B47169800C3E53A /* Extension */,
+				B5EFC6182B47174E00C3E53A /* Helper */,
+				B5EFC6112B4716BB00C3E53A /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B5EFC6082B47169800C3E53A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC6092B4716A100C3E53A /* Extension+String.swift */,
+				B5EFC60A2B4716A100C3E53A /* Extension+UIColor.swift */,
+				B5EFC60B2B4716A100C3E53A /* Extension+UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B5EFC6132B4716CD00C3E53A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC6142B4716D600C3E53A /* Service.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B5EFC6182B47174E00C3E53A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B5EFC60F2B4716B700C3E53A /* AppHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +302,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5EFC5E32B470E1900C3E53A /* ViewController.swift in Sources */,
+				B5EFC5FC2B47153300C3E53A /* HomeRouter.swift in Sources */,
+				B5EFC5FE2B47153300C3E53A /* HomeModule.swift in Sources */,
 				B5EFC5DF2B470E1900C3E53A /* AppDelegate.swift in Sources */,
 				B5EFC5E12B470E1900C3E53A /* SceneDelegate.swift in Sources */,
+				B5EFC6122B4716BB00C3E53A /* Constants.swift in Sources */,
+				B5EFC6022B47155C00C3E53A /* HomeCollectionViewCell.swift in Sources */,
+				B5EFC5FB2B47153300C3E53A /* HomeInteractor.swift in Sources */,
+				B5EFC60C2B4716A100C3E53A /* Extension+String.swift in Sources */,
+				B5EFC6152B4716D600C3E53A /* Service.swift in Sources */,
+				B5EFC5FD2B47153300C3E53A /* HomeViewController.swift in Sources */,
+				B5EFC5FA2B47153300C3E53A /* HomePresenter.swift in Sources */,
+				B5EFC6062B47161100C3E53A /* ProductModel.swift in Sources */,
+				B5EFC6102B4716B700C3E53A /* AppHelper.swift in Sources */,
+				B5EFC60D2B4716A100C3E53A /* Extension+UIColor.swift in Sources */,
+				B5EFC60E2B4716A100C3E53A /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +379,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,7 +442,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
