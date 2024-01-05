@@ -11,16 +11,17 @@ class AppHelper {
     
     static let shared = AppHelper()
     
-    var statusBarHeight: CGFloat {
-        return UIApplication.shared.statusBarFrame.height
-    }
-    
     var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
     }
     
     var screenHeight: CGFloat {
         return UIScreen.main.bounds.height
+    }
+    
+    var topSafeAreaHeight: CGFloat {
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        return window?.safeAreaInsets.top ?? 0
     }
         
 }

@@ -42,14 +42,19 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
         let search = UISearchBar()
         
         let textFieldInsideSearchBar = search.value(forKey: "searchField") as? UITextField
-        textFieldInsideSearchBar?.textColor = .white
-        
+        textFieldInsideSearchBar?.textColor = .textColor
         search.tintColor = .white
-        search.barTintColor = .white
+        search.barTintColor = .backgroundColor
         return search
     }()
     
-    private let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Products"
+        label.font = .systemFont(ofSize: 24)
+        label.textColor = .textColor
+        return label
+    }()
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
 
@@ -82,8 +87,7 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
     }
     
     private func setupNavbar() {
-        self.navigationItem.titleView = searchBar
-        navigationItem.rightBarButtonItem = cancelButton
+        self.navigationItem.title = "Rocket Shop"
     }
     
     private func setupCollectionView(){
@@ -106,9 +110,22 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
     private func setupView() {
         view.backgroundColor = .backgroundColor
         
+        view.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.equalToSuperview().offset(24)
+        }
+        
+        view.addSubview(searchBar)
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview()
+        }
+        
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview()
+            make.top.equalTo(searchBar.snp.bottom).offset(4)
+            make.bottom.equalToSuperview()
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().inset(16)
         }
@@ -118,10 +135,6 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
             make.center.equalToSuperview()
             make.height.width.equalTo(50)
         }
-    }
-    
-    @objc func cancelButtonTapped() {
-        
     }
 
     // MARK: - Home Presenter to View Protocol

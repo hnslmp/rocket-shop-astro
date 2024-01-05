@@ -18,7 +18,7 @@ extension UIView {
     }
     
     func stopSkeleton() {
-        guard isSkeletonable, isSkeletonActive else { return }
+        guard isSkeletonable, sk.isSkeletonActive else { return }
         DispatchQueue.main.async { [weak self] in
             self?.stopSkeletonAnimation()
             self?.hideSkeleton()
