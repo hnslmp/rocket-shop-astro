@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
     // MARK: - Constants
     let presenter: HomeViewPresenterProtocol
     var obsProducts: BehaviorRelay<[ProductModel]>?
+    var obsSearchFilter: BehaviorRelay<String>?
     var obsIsLoadingProducts: BehaviorRelay<Bool>?
 
     // MARK: Variables
@@ -40,7 +41,6 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
     
     private let searchBar:UISearchBar = {
         let search = UISearchBar()
-        
         let textFieldInsideSearchBar = search.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = .textColor
         search.tintColor = .white
@@ -73,10 +73,9 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
         super.viewDidLoad()
         presenter.viewLoaded()
         
-
         obsProducts = presenter.getObsProducts()
         obsIsLoadingProducts = presenter.getObsIsLoadingProducts()
-        
+        obsSearchFilter = presenter.getObsSearchFilter()
         
         presenter.requestProducts()
         
@@ -109,6 +108,7 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
     
     private func setupView() {
         view.backgroundColor = .backgroundColor
+        searchBar.delegate = self
         
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
@@ -180,6 +180,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         presenter.goToProductDetail(selectedProduct)
 
     }
-    
-    
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        obsSearchFilter?.accept(searchText)
+    }
 }

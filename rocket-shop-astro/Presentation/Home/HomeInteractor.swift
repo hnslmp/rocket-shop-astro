@@ -18,6 +18,7 @@ import RxCocoa
 protocol HomePresenterInteractorProtocol {
     func getObsProducts() -> BehaviorRelay<[ProductModel]>
     func getObsIsLoadingProducts() -> BehaviorRelay<Bool>
+    func getObsSearchFilter() -> BehaviorRelay<String>
     func requestProducts()
 }
 
@@ -33,7 +34,8 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
     private let disposeBag = DisposeBag()
     private var obsProducts: BehaviorRelay<[ProductModel]> = BehaviorRelay(value: [])
     private var obsIsLoadingProducts = BehaviorRelay<Bool>(value: false)
-    
+    private var obsSearchFilter: BehaviorRelay<String> = BehaviorRelay(value: "")
+    private var obsProductsResponse: BehaviorRelay<[ProductModel]> = BehaviorRelay(value: [])
     private let service = Service.shared
 
     // MARK: - Home Presenter to Interactor Protocol
@@ -49,6 +51,21 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
         obsIsLoadingProducts.subscribe { [weak self] _ in
             self?.presenter?.performUpdates()
         }.disposed(by: disposeBag)
+        
+        obsProductsResponse.subscribe( onNext: {[weak self] response in
+            var products = self?.obsProducts.value ?? []
+            products.append(contentsOf: response)
+            self?.obsProducts.accept(products)
+        }).disposed(by: disposeBag)
+        
+        obsSearchFilter.subscribe(onNext: { [weak self] result in
+            let products = self?.obsProductsResponse.value ?? []
+            if result.isEmpty {
+                self?.obsProducts.accept(products)
+            } else {
+                self?.obsProducts.accept(products.filter({ $0.title.contains(result)}))
+            }
+        }).disposed(by: disposeBag)
     }
     
     func getObsProducts() -> BehaviorRelay<[ProductModel]> {
@@ -59,6 +76,10 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
         obsIsLoadingProducts
     }
     
+    func getObsSearchFilter() -> BehaviorRelay<String> {
+        obsSearchFilter
+    }
+    
     func requestProducts() {
         obsIsLoadingProducts.accept(true)
         service.requestProducts { result in
@@ -66,7 +87,7 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
             case .success(let result):
                 var products = self.obsProducts.value
                 products.append(contentsOf: result)
-                self.obsProducts.accept(products)
+                self.obsProductsResponse.accept(products)
                 self.obsIsLoadingProducts.accept(false)
             case .failure(let error):
                 self.obsIsLoadingProducts.accept(false)
