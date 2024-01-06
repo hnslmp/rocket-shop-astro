@@ -19,6 +19,7 @@ protocol HomePresenterInteractorProtocol {
     func getObsProducts() -> BehaviorRelay<[ProductModel]>
     func getObsIsLoadingProducts() -> BehaviorRelay<Bool>
     func getObsSearchFilter() -> BehaviorRelay<String>
+    func getObsIsError() -> BehaviorRelay<Bool>
     func requestProducts()
 }
 
@@ -36,6 +37,7 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
     private var obsIsLoadingProducts = BehaviorRelay<Bool>(value: false)
     private var obsSearchFilter: BehaviorRelay<String> = BehaviorRelay(value: "")
     private var obsProductsResponse: BehaviorRelay<[ProductModel]> = BehaviorRelay(value: [])
+    private var obsIsError: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     private let service = Service.shared
 
     // MARK: - Home Presenter to Interactor Protocol
@@ -72,6 +74,10 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
         obsProducts
     }
     
+    func getObsIsError() -> BehaviorRelay<Bool> {
+        obsIsError
+    }
+    
     func getObsIsLoadingProducts() -> BehaviorRelay<Bool> {
         obsIsLoadingProducts
     }
@@ -90,6 +96,7 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
                 self.obsProductsResponse.accept(products)
                 self.obsIsLoadingProducts.accept(false)
             case .failure(let error):
+                self.obsIsError.accept(true)
                 self.obsIsLoadingProducts.accept(false)
                 print(error.localizedDescription)
                 

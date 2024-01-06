@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
     // MARK: - Constants
     let presenter: HomeViewPresenterProtocol
     var obsProducts: BehaviorRelay<[ProductModel]>?
+    var obsIsError: BehaviorRelay<Bool>?
     var obsSearchFilter: BehaviorRelay<String>?
     var obsIsLoadingProducts: BehaviorRelay<Bool>?
 
@@ -56,6 +57,15 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
         return label
     }()
     
+    private let retryButton: UIButton = {
+        let button = UIButton()
+        button.setTitleForAllStates("Retry")
+        button.setTitleColorForAllStates(.backgroundColor)
+        button.backgroundColor = .textColor
+        button.layerCornerRadius = 4
+        return button
+    }()
+    
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
 
     // MARK: Inits
@@ -76,6 +86,7 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
         obsProducts = presenter.getObsProducts()
         obsIsLoadingProducts = presenter.getObsIsLoadingProducts()
         obsSearchFilter = presenter.getObsSearchFilter()
+        obsIsError = presenter.getObsIsError()
         
         presenter.requestProducts()
         
@@ -130,6 +141,14 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
             make.trailing.equalToSuperview().inset(16)
         }
         
+        retryButton.addTarget(self, action: #selector(onTapRetryButton), for: .touchUpInside)
+        view.addSubview(retryButton)
+        retryButton.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.width.equalTo(120)
+            make.height.equalTo(48)
+        }
+        
         view.addSubview(spinner)
         spinner.snp.makeConstraints { make in
             make.center.equalToSuperview()
@@ -146,8 +165,16 @@ class HomeViewController: UIViewController, HomePresenterViewProtocol {
                 spinner.stopAnimating()
             }
         }
+//        retryButton.isHidden = obsProducts == nil
+        retryButton.isHidden = !(obsIsError?.value ?? false)
+        
         collectionView.reloadData()
     }
+    
+    @objc func onTapRetryButton() {
+        presenter.requestProducts()
+    }
+
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

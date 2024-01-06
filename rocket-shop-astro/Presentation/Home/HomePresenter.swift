@@ -20,6 +20,7 @@ protocol HomeViewPresenterProtocol: ViewPresenterProtocol {
     func getObsIsLoadingProducts() -> BehaviorRelay<Bool>
     func goToProductDetail(_ selectedProduct : ProductModel)
     func getObsSearchFilter() -> BehaviorRelay<String>
+    func getObsIsError() -> BehaviorRelay<Bool>
     func requestProducts()
 }
 
@@ -56,15 +57,19 @@ final class HomePresenter: HomeViewPresenterProtocol, HomeInteractorPresenterPro
         
     }
     
+    func getObsIsError() -> BehaviorRelay<Bool> {
+        interactor.getObsIsError()
+    }
+    
     func requestProducts() {
         interactor.requestProducts()
     }
     
-    func getObsProducts() -> RxRelay.BehaviorRelay<[ProductModel]> {
+    func getObsProducts() -> BehaviorRelay<[ProductModel]> {
         interactor.getObsProducts()
     }
     
-    func getObsIsLoadingProducts() -> RxRelay.BehaviorRelay<Bool> {
+    func getObsIsLoadingProducts() -> BehaviorRelay<Bool> {
         interactor.getObsIsLoadingProducts()
     }
     
