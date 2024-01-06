@@ -25,11 +25,16 @@ class HomeCollectionViewCell: UICollectionViewCell {
         
         self.startSkeleton()
         cellImage.sd_setImage(with: URL(string: product.image), completed: { (image, error, cacheType, imageURL) in
+            
+            if let error = error {
+                self.setupBroken()
+            }
+            
             self.stopSkeleton()
         })
     }
     
-    func setupBroken() {
+    private func setupBroken() {
         cellImage.image = UIImage(named: "img-broken-image")
         
         contentView.addSubview(cellImage)

@@ -158,13 +158,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HomeCollectionViewCell.self), for: indexPath) as! HomeCollectionViewCell
-        
-        if let products = obsProducts?.value {
-            cell.setupView(product: products[indexPath.row])
-        } else {
-            cell.setupBroken()
-        }
-        
+
+        guard let products = obsProducts?.value else { return cell }
+        cell.setupView(product: products[indexPath.row])
+    
         return cell
     }
     

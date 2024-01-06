@@ -13,6 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 24),
+                                          .foregroundColor: UIColor.textColor,]
+
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.tintColor = UIColor.textColor
+        navBarAppearance.standardAppearance = appearance
+        navBarAppearance.scrollEdgeAppearance = appearance
+        
         return true
     }
 
