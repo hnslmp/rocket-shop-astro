@@ -49,6 +49,7 @@ PODS:
     - SwiftMessages/App (= 9.0.9)
   - SwiftMessages/App (9.0.9)
   - SwiftyVIPER (2.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - SwifterSwift
   - SwiftMessages
   - SwiftyVIPER
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -75,6 +77,7 @@ SPEC REPOS:
     - SwifterSwift
     - SwiftMessages
     - SwiftyVIPER
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
@@ -88,7 +91,8 @@ SPEC CHECKSUMS:
   SwifterSwift: 66843dc594f8fb890f5543c22545921d44acc004
   SwiftMessages: 1a23aef303fa7bb26ad802880746cf8358e378fe
   SwiftyVIPER: 826670ff53981da482e6a279a6f428f5567530ea
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 0706ed4cab1f168268458b5bd26561729681e969
+PODFILE CHECKSUM: 724b125324b2ebceae8dd901c8920bd48f08cedd
 
 COCOAPODS: 1.12.1

@@ -13,6 +13,7 @@
 		B5264B5D2B498693005F99EE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B582B498693005F99EE /* DetailPresenter.swift */; };
 		B5264B5E2B498693005F99EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B592B498693005F99EE /* DetailViewController.swift */; };
 		B5264B5F2B498693005F99EE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B5A2B498693005F99EE /* DetailInteractor.swift */; };
+		B5264B612B49C0AA005F99EE /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B602B49C0AA005F99EE /* Extension+UIViewController.swift */; };
 		B5EFC5DF2B470E1900C3E53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */; };
 		B5EFC5E12B470E1900C3E53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */; };
 		B5EFC5E32B470E1900C3E53A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5E22B470E1900C3E53A /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		B5264B582B498693005F99EE /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		B5264B592B498693005F99EE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B5264B5A2B498693005F99EE /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		B5264B602B49C0AA005F99EE /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		B5EFC5DB2B470E1900C3E53A /* rocket-shop-astro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rocket-shop-astro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				B5EFC6092B4716A100C3E53A /* Extension+String.swift */,
 				B5EFC60A2B4716A100C3E53A /* Extension+UIColor.swift */,
 				B5EFC60B2B4716A100C3E53A /* Extension+UIView.swift */,
+				B5264B602B49C0AA005F99EE /* Extension+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				B5EFC5E12B470E1900C3E53A /* SceneDelegate.swift in Sources */,
 				B5EFC6122B4716BB00C3E53A /* Constants.swift in Sources */,
 				B5264B5E2B498693005F99EE /* DetailViewController.swift in Sources */,
+				B5264B612B49C0AA005F99EE /* Extension+UIViewController.swift in Sources */,
 				B5EFC6022B47155C00C3E53A /* HomeCollectionViewCell.swift in Sources */,
 				B5EFC5FB2B47153300C3E53A /* HomeInteractor.swift in Sources */,
 				B5EFC60C2B4716A100C3E53A /* Extension+String.swift in Sources */,

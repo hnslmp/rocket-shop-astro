@@ -27,13 +27,13 @@ protocol HomeViewPresenterProtocol: ViewPresenterProtocol {
 /// Should be conformed to by the `HomePresenter` and referenced by `HomeInteractor`
 protocol HomeInteractorPresenterProtocol: AnyObject {
     func performUpdates()
+    func showError(error: Error)
 }
 
 // MARK: -
 
 /// The Presenter for the Home module
 final class HomePresenter: HomeViewPresenterProtocol, HomeInteractorPresenterProtocol {
-
 
     // MARK: - Constants
 
@@ -86,5 +86,7 @@ final class HomePresenter: HomeViewPresenterProtocol, HomeInteractorPresenterPro
         router.goToProductDetail(selectedProduct)
     }
     
-    
+    func showError(error: Error) {
+        view?.showError(error: error)
+    }
 }

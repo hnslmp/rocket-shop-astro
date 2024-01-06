@@ -97,10 +97,9 @@ final class HomeInteractor: HomePresenterInteractorProtocol {
                 self.obsIsLoadingProducts.accept(false)
             case .failure(let error):
                 self.obsIsError.accept(true)
+                self.presenter?.showError(error: error)
                 self.obsIsLoadingProducts.accept(false)
                 print(error.localizedDescription)
-                
-                // TODO: show error state snackbar
             }
         }
         

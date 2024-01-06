@@ -15,7 +15,7 @@ class Service {
     
     public func requestProducts(completion: @escaping (Result<ProductsList, Error>) -> Void){
         
-        let urlString = Constants.baseApi + Endpoints.products + "xx" //To simulate response error
+        let urlString = Constants.baseApi + Endpoints.products /*+ "xx"*/ //To simulate response error
         
         AF.request(urlString).responseDecodable(of: ProductsList.self) { response in
             switch response.result {

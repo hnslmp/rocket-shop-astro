@@ -18,6 +18,7 @@ import RxCocoa
 /// Should be conformed to by the `HomeViewController` and referenced by `HomePresenter`
 protocol HomePresenterViewProtocol: AnyObject {
     func performUpdates()
+    func showError(error: Error)
 }
 
 // MARK: -

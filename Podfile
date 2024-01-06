@@ -16,4 +16,5 @@ target 'rocket-shop-astro' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SkeletonView'
+  pod 'Toast-Swift'
 end
