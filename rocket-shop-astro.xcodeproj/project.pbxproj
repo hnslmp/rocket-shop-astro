@@ -14,6 +14,8 @@
 		B5264B5E2B498693005F99EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B592B498693005F99EE /* DetailViewController.swift */; };
 		B5264B5F2B498693005F99EE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B5A2B498693005F99EE /* DetailInteractor.swift */; };
 		B5264B612B49C0AA005F99EE /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B602B49C0AA005F99EE /* Extension+UIViewController.swift */; };
+		B5264BAC2B49C4C4005F99EE /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264BAB2B49C4C4005F99EE /* ServiceTests.swift */; };
+		B5264BB32B49C658005F99EE /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264BB22B49C658005F99EE /* ConstantsTests.swift */; };
 		B5EFC5DF2B470E1900C3E53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */; };
 		B5EFC5E12B470E1900C3E53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */; };
 		B5EFC5E32B470E1900C3E53A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5E22B470E1900C3E53A /* ViewController.swift */; };
@@ -35,6 +37,16 @@
 		B5EFC6152B4716D600C3E53A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC6142B4716D600C3E53A /* Service.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B5264BAD2B49C4C4005F99EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5EFC5D32B470E1900C3E53A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5EFC5DA2B470E1900C3E53A;
+			remoteInfo = "rocket-shop-astro";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		953CD5AEFD770C13E8B9083B /* Pods-rocket-shop-astro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rocket-shop-astro.debug.xcconfig"; path = "Target Support Files/Pods-rocket-shop-astro/Pods-rocket-shop-astro.debug.xcconfig"; sourceTree = "<group>"; };
 		A89BFEDB28D511B5F111CA1E /* Pods-rocket-shop-astro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rocket-shop-astro.release.xcconfig"; path = "Target Support Files/Pods-rocket-shop-astro/Pods-rocket-shop-astro.release.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +56,9 @@
 		B5264B592B498693005F99EE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B5264B5A2B498693005F99EE /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		B5264B602B49C0AA005F99EE /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		B5264BA92B49C4C4005F99EE /* rocket-shop-astroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rocket-shop-astroTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5264BAB2B49C4C4005F99EE /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
+		B5264BB22B49C658005F99EE /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
 		B5EFC5DB2B470E1900C3E53A /* rocket-shop-astro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rocket-shop-astro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +84,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B5264BA62B49C4C4005F99EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5EFC5D82B470E1900C3E53A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -109,10 +131,20 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		B5264BAA2B49C4C4005F99EE /* rocket-shop-astroTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5264BAB2B49C4C4005F99EE /* ServiceTests.swift */,
+				B5264BB22B49C658005F99EE /* ConstantsTests.swift */,
+			);
+			path = "rocket-shop-astroTests";
+			sourceTree = "<group>";
+		};
 		B5EFC5D22B470E1900C3E53A = {
 			isa = PBXGroup;
 			children = (
 				B5EFC5DD2B470E1900C3E53A /* rocket-shop-astro */,
+				B5264BAA2B49C4C4005F99EE /* rocket-shop-astroTests */,
 				B5EFC5DC2B470E1900C3E53A /* Products */,
 				A13969EC6FB783C6BEEC569D /* Pods */,
 				265CC6D368B7FEAEF447A25E /* Frameworks */,
@@ -123,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				B5EFC5DB2B470E1900C3E53A /* rocket-shop-astro.app */,
+				B5264BA92B49C4C4005F99EE /* rocket-shop-astroTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,6 +248,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B5264BA82B49C4C4005F99EE /* rocket-shop-astroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5264BAF2B49C4C4005F99EE /* Build configuration list for PBXNativeTarget "rocket-shop-astroTests" */;
+			buildPhases = (
+				B5264BA52B49C4C4005F99EE /* Sources */,
+				B5264BA62B49C4C4005F99EE /* Frameworks */,
+				B5264BA72B49C4C4005F99EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5264BAE2B49C4C4005F99EE /* PBXTargetDependency */,
+			);
+			name = "rocket-shop-astroTests";
+			productName = "rocket-shop-astroTests";
+			productReference = B5264BA92B49C4C4005F99EE /* rocket-shop-astroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B5EFC5DA2B470E1900C3E53A /* rocket-shop-astro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5EFC5EF2B470E1A00C3E53A /* Build configuration list for PBXNativeTarget "rocket-shop-astro" */;
@@ -244,6 +295,10 @@
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
+					B5264BA82B49C4C4005F99EE = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = B5EFC5DA2B470E1900C3E53A;
+					};
 					B5EFC5DA2B470E1900C3E53A = {
 						CreatedOnToolsVersion = 15.1;
 					};
@@ -263,11 +318,19 @@
 			projectRoot = "";
 			targets = (
 				B5EFC5DA2B470E1900C3E53A /* rocket-shop-astro */,
+				B5264BA82B49C4C4005F99EE /* rocket-shop-astroTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B5264BA72B49C4C4005F99EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5EFC5D92B470E1900C3E53A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +386,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B5264BA52B49C4C4005F99EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5264BAC2B49C4C4005F99EE /* ServiceTests.swift in Sources */,
+				B5264BB32B49C658005F99EE /* ConstantsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5EFC5D72B470E1900C3E53A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +426,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B5264BAE2B49C4C4005F99EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5EFC5DA2B470E1900C3E53A /* rocket-shop-astro */;
+			targetProxy = B5264BAD2B49C4C4005F99EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B5EFC5E42B470E1900C3E53A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -374,6 +454,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B5264BB02B49C4C4005F99EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5DUFZTPDQV;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astro.ios.rocketshop.hnslmp.rocket-shop-astroTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rocket-shop-astro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rocket-shop-astro";
+			};
+			name = Debug;
+		};
+		B5264BB12B49C4C4005F99EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5DUFZTPDQV;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.astro.ios.rocketshop.hnslmp.rocket-shop-astroTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rocket-shop-astro.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rocket-shop-astro";
+			};
+			name = Release;
+		};
 		B5EFC5ED2B470E1A00C3E53A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -554,6 +672,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B5264BAF2B49C4C4005F99EE /* Build configuration list for PBXNativeTarget "rocket-shop-astroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5264BB02B49C4C4005F99EE /* Debug */,
+				B5264BB12B49C4C4005F99EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B5EFC5D62B470E1900C3E53A /* Build configuration list for PBXProject "rocket-shop-astro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
