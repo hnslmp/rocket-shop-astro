@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6A04F0331169C8DE2ABB12FB /* Pods_rocket_shop_astro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F991692B066725A0EC2829 /* Pods_rocket_shop_astro.framework */; };
+		B5264B5B2B498693005F99EE /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B562B498693005F99EE /* DetailModule.swift */; };
+		B5264B5C2B498693005F99EE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B572B498693005F99EE /* DetailRouter.swift */; };
+		B5264B5D2B498693005F99EE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B582B498693005F99EE /* DetailPresenter.swift */; };
+		B5264B5E2B498693005F99EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B592B498693005F99EE /* DetailViewController.swift */; };
+		B5264B5F2B498693005F99EE /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5264B5A2B498693005F99EE /* DetailInteractor.swift */; };
 		B5EFC5DF2B470E1900C3E53A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */; };
 		B5EFC5E12B470E1900C3E53A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */; };
 		B5EFC5E32B470E1900C3E53A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFC5E22B470E1900C3E53A /* ViewController.swift */; };
@@ -32,6 +37,11 @@
 /* Begin PBXFileReference section */
 		953CD5AEFD770C13E8B9083B /* Pods-rocket-shop-astro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rocket-shop-astro.debug.xcconfig"; path = "Target Support Files/Pods-rocket-shop-astro/Pods-rocket-shop-astro.debug.xcconfig"; sourceTree = "<group>"; };
 		A89BFEDB28D511B5F111CA1E /* Pods-rocket-shop-astro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rocket-shop-astro.release.xcconfig"; path = "Target Support Files/Pods-rocket-shop-astro/Pods-rocket-shop-astro.release.xcconfig"; sourceTree = "<group>"; };
+		B5264B562B498693005F99EE /* DetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		B5264B572B498693005F99EE /* DetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		B5264B582B498693005F99EE /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		B5264B592B498693005F99EE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B5264B5A2B498693005F99EE /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		B5EFC5DB2B470E1900C3E53A /* rocket-shop-astro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rocket-shop-astro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5EFC5DE2B470E1900C3E53A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5EFC5E02B470E1900C3E53A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +93,18 @@
 				A89BFEDB28D511B5F111CA1E /* Pods-rocket-shop-astro.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B5264B472B498548005F99EE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B5264B5A2B498693005F99EE /* DetailInteractor.swift */,
+				B5264B562B498693005F99EE /* DetailModule.swift */,
+				B5264B582B498693005F99EE /* DetailPresenter.swift */,
+				B5264B572B498693005F99EE /* DetailRouter.swift */,
+				B5264B592B498693005F99EE /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		B5EFC5D22B470E1900C3E53A = {
@@ -145,6 +167,7 @@
 		B5EFC6042B4715AB00C3E53A /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B5264B472B498548005F99EE /* Detail */,
 				B5EFC5F42B47151F00C3E53A /* Home */,
 			);
 			path = Presentation;
@@ -305,16 +328,21 @@
 				B5EFC5FC2B47153300C3E53A /* HomeRouter.swift in Sources */,
 				B5EFC5FE2B47153300C3E53A /* HomeModule.swift in Sources */,
 				B5EFC5DF2B470E1900C3E53A /* AppDelegate.swift in Sources */,
+				B5264B5B2B498693005F99EE /* DetailModule.swift in Sources */,
 				B5EFC5E12B470E1900C3E53A /* SceneDelegate.swift in Sources */,
 				B5EFC6122B4716BB00C3E53A /* Constants.swift in Sources */,
+				B5264B5E2B498693005F99EE /* DetailViewController.swift in Sources */,
 				B5EFC6022B47155C00C3E53A /* HomeCollectionViewCell.swift in Sources */,
 				B5EFC5FB2B47153300C3E53A /* HomeInteractor.swift in Sources */,
 				B5EFC60C2B4716A100C3E53A /* Extension+String.swift in Sources */,
+				B5264B5D2B498693005F99EE /* DetailPresenter.swift in Sources */,
 				B5EFC6152B4716D600C3E53A /* Service.swift in Sources */,
 				B5EFC5FD2B47153300C3E53A /* HomeViewController.swift in Sources */,
 				B5EFC5FA2B47153300C3E53A /* HomePresenter.swift in Sources */,
 				B5EFC6062B47161100C3E53A /* ProductModel.swift in Sources */,
 				B5EFC6102B4716B700C3E53A /* AppHelper.swift in Sources */,
+				B5264B5C2B498693005F99EE /* DetailRouter.swift in Sources */,
+				B5264B5F2B498693005F99EE /* DetailInteractor.swift in Sources */,
 				B5EFC60D2B4716A100C3E53A /* Extension+UIColor.swift in Sources */,
 				B5EFC60E2B4716A100C3E53A /* Extension+UIView.swift in Sources */,
 			);

@@ -28,6 +28,6 @@ final class HomeRouter: RouterProtocol, HomePresenterRouterProtocol {
 	weak var viewController: UIViewController?
     
     func goToProductDetail(_ selectedProduct : ProductModel) {
-//        viewController?.navigationController?.pushViewController(DetailModule(product: selectedProduct).view, animated: true)
+        viewController?.navigationController?.pushViewController(DetailModule(product: selectedProduct).view, animated: true)
     }
 }

@@ -178,7 +178,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         guard let products = obsProducts?.value else { return }
         let selectedProduct = products[indexPath.row]
         presenter.goToProductDetail(selectedProduct)
-
     }
 }
 
