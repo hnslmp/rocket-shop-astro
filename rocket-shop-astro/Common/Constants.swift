@@ -1,8 +1,8 @@
 //
 //  Constants.swift
-//  pokemon-ajaib
+//  rocket-shop-astro
 //
-//  Created by Hansel Matthew on 20/03/23.
+//  Created by Hansel Matthew on 04/01/24.
 //
 
 import Foundation
